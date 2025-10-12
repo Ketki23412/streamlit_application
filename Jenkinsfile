@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh  '''
                 docker rm -f python-container || true
-                docker run -d --name python-container -p 8501:8501  kj-pythonapp
+                docker run -d --name python-container -p 8501:8501  -t pythonapp
                 '''
             }
         }
